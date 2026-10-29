@@ -1,0 +1,178 @@
+{
+ "bolo-aranha-azul": {
+  "w": 1200,
+  "h": 1600,
+  "widths": [
+   480,
+   960,
+   1200
+  ]
+ },
+ "bolo-aranha-vermelho": {
+  "w": 1200,
+  "h": 1600,
+  "widths": [
+   480,
+   960,
+   1200
+  ]
+ },
+ "bolo-barras-confeitos": {
+  "w": 1600,
+  "h": 1200,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "bolo-barras-mesa": {
+  "w": 395,
+  "h": 527,
+  "widths": [
+   395
+  ]
+ },
+ "bolo-batman": {
+  "w": 1200,
+  "h": 1600,
+  "widths": [
+   480,
+   960,
+   1200
+  ]
+ },
+ "bolo-cerejas": {
+  "w": 1200,
+  "h": 1600,
+  "widths": [
+   480,
+   960,
+   1200
+  ]
+ },
+ "bolo-cervinho": {
+  "w": 1200,
+  "h": 1600,
+  "widths": [
+   480,
+   960,
+   1200
+  ]
+ },
+ "bolo-frozen": {
+  "w": 1200,
+  "h": 1600,
+  "widths": [
+   480,
+   960,
+   1200
+  ]
+ },
+ "bolo-marshmallow": {
+  "w": 443,
+  "h": 332,
+  "widths": [
+   443
+  ]
+ },
+ "bolo-pirulitos": {
+  "w": 1200,
+  "h": 1600,
+  "widths": [
+   480,
+   960,
+   1200
+  ]
+ },
+ "bolo-unicornio": {
+  "w": 543,
+  "h": 416,
+  "widths": [
+   543
+  ]
+ },
+ "cone-chocolate-coco": {
+  "w": 392,
+  "h": 651,
+  "widths": [
+   392
+  ]
+ },
+ "cone-chocolate-mao": {
+  "w": 303,
+  "h": 380,
+  "widths": [
+   303
+  ]
+ },
+ "cone-perolas": {
+  "w": 341,
+  "h": 416,
+  "widths": [
+   341
+  ]
+ },
+ "cones-confeitos": {
+  "w": 546,
+  "h": 377,
+  "widths": [
+   546
+  ]
+ },
+ "cones-crocantes": {
+  "w": 548,
+  "h": 370,
+  "widths": [
+   548
+  ]
+ },
+ "cones-trio": {
+  "w": 487,
+  "h": 594,
+  "widths": [
+   487
+  ]
+ },
+ "cones-variedade": {
+  "w": 582,
+  "h": 664,
+  "widths": [
+   480,
+   582
+  ]
+ },
+ "docinhos-bandeja": {
+  "w": 386,
+  "h": 515,
+  "widths": [
+   386
+  ]
+ },
+ "mesa-casamento": {
+  "w": 1200,
+  "h": 1600,
+  "widths": [
+   480,
+   960,
+   1200
+  ]
+ },
+ "mesa-unicornio": {
+  "w": 1600,
+  "h": 1200,
+  "widths": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "patricia-bolin": {
+  "w": 776,
+  "h": 851,
+  "widths": [
+   480,
+   776
+  ]
+ }
+}

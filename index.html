@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bolin Doces</title>
+  <meta name="description" content="Bolos, cones recheados e docinhos da Bolin Doces, preparados com carinho do começo ao fim. Peça pelo WhatsApp.">
+  <meta name="theme-color" content="#2B1218">
+  <meta property="og:title" content="Bolin Doces">
+  <meta property="og:description" content="Bolos, cones recheados e docinhos preparados com carinho do começo ao fim.">
+  <meta property="og:image" content="assets/img/hero-poster.webp">
+
+  <!-- Favicon (gerado a partir da logo oficial) -->
+  <link rel="icon" href="assets/icons/favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Tipografia -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Young+Serif&display=swap">
+
+  <!-- A imagem de fallback do hero é o primeiro elemento a carregar -->
+  <link rel="preload" as="image" href="assets/img/hero-poster-mobile.webp" type="image/webp" media="(max-width: 899px)" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/img/hero-poster.webp" type="image/webp" media="(min-width: 900px)" fetchpriority="high">
+
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/brand-loader.js" defer></script>
+  <!-- ordem importa: configuração → WhatsApp → orçamento → galeria → página -->
+  <script src="js/catalog.js" defer></script>
+  <script src="js/whatsapp.js" defer></script>
+  <script src="js/quote.js" defer></script>
+  <script src="js/gallery.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- Tela de carregamento: logo original e barra de progresso -->
+  <div class="brand-loader" data-brand-loader role="status" aria-label="Carregando Bolin Doces">
+    <img class="brand-loader__logo" src="assets/img/logo.webp" alt="Bolin Doces" width="369" height="369" fetchpriority="high">
+    <div class="brand-loader__track" aria-hidden="true"><span class="brand-loader__progress"></span></div>
+    <span class="brand-loader__label">Preparando algo gostoso...</span>
+  </div>
+
+  <header class="hero" id="inicio">
+    <div class="site-header">
+      <a class="site-header__logo" href="#inicio" aria-label="Bolin Doces, início">
+        <picture>
+          <source srcset="assets/img/logo.webp" type="image/webp">
+          <img src="assets/img/logo.png" alt="Bolin Doces" width="369" height="369">
+        </picture>
+      </a>
+      <nav aria-label="Principal">
+        <a class="site-header__link" href="#cones">Cones</a>
+        <a class="site-header__link" href="#bolos">Bolos</a>
+        <a class="site-header__link" href="#docinhos">Docinhos</a>
+        <a class="site-header__link" href="#patricia">Patricia</a>
+      </nav>
+    </div>
+
+    <div class="hero__media" aria-hidden="true">
+      <!-- Fallback: aparece primeiro e permanece se o vídeo não carregar -->
+      <picture>
+        <source media="(max-width: 899px)" srcset="assets/img/hero-poster-mobile.webp">
+        <img class="hero__poster" src="assets/img/hero-poster.webp" alt="" width="1280" height="720" fetchpriority="high" decoding="async">
+      </picture>
+      <!-- Os <source> são inseridos por js/main.js conforme tela e conexão -->
+      <video class="hero__video" data-hero-video muted autoplay loop playsinline
+             disablepictureinpicture disableremoteplayback tabindex="-1"></video>
+      <div class="hero__shade"></div>
+    </div>
+
+    <div class="hero__content">
+      <h1 class="hero__title">O doce que faz<br> o dia sorrir.</h1>
+      <div class="hero__aside">
+        <p class="hero__text">Bolos, cones recheados e docinhos da Bolin Doces, preparados com carinho do começo ao fim.</p>
+        <div class="hero__actions">
+          <a class="btn btn--wa" data-wa href="#contato"><svg class="ico whatsapp-mark" aria-hidden="true" width="20" height="20" viewBox="0 0 32 32" fill="currentColor"><path d="M16.04 2.67A13.28 13.28 0 0 0 4.61 22.72L2.67 29.33l6.77-1.88a13.3 13.3 0 1 0 6.6-24.78Zm0 24.2a10.9 10.9 0 0 1-5.56-1.52l-.4-.24-4.02 1.12 1.16-3.91-.26-.41a10.92 10.92 0 1 1 9.08 4.96Zm5.99-8.18c-.33-.17-1.95-.96-2.25-1.07-.3-.11-.52-.17-.74.17-.22.33-.85 1.07-1.04 1.29-.19.22-.39.25-.72.08-.33-.17-1.4-.52-2.66-1.65-.98-.87-1.64-1.95-1.83-2.28-.19-.33-.02-.51.15-.68.15-.15.33-.39.5-.58.17-.19.22-.33.33-.55.11-.22.06-.41-.03-.58-.08-.17-.74-1.79-1.01-2.45-.27-.65-.54-.56-.74-.57h-.63c-.22 0-.58.08-.88.41-.3.33-1.15 1.12-1.15 2.73s1.18 3.17 1.34 3.39c.17.22 2.32 3.54 5.62 4.96.79.34 1.4.54 1.88.69.79.25 1.5.21 2.06.13.63-.09 1.95-.8 2.23-1.57.28-.77.28-1.43.19-1.57-.08-.14-.3-.22-.63-.39Z"/></svg><span>Pedir pelo WhatsApp</span></a>
+          <a class="btn btn--ghost" href="#cones"><span>Ver os doces</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- transição: glacê subindo sobre o vídeo -->
+    <svg class="hero__icing" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 100 L0 60 Q55 28 110 60 Q175 47 240 60 Q275 47 310 60 Q365 47 420 60 Q465 47 510 60 Q545 -14 580 60 Q645 47 710 60 Q755 47 800 60 Q865 47 930 60 Q965 28 1000 60 Q1035 -14 1070 60 Q1105 28 1140 60 Q1175 28 1210 60 Q1265 -14 1320 60 Q1365 47 1410 60 Q1465 28 1520 60 L1440 100 Z"/></svg>
+  </header>
+
+  <main>
+    <!-- CONES -->
+    <section class="section section--blush" id="cones" aria-labelledby="cones-titulo">
+      <div class="section__inner">
+        <header class="section__head section__head--split" data-reveal>
+          <div>
+            <h2 id="cones-titulo">Cones recheados</h2>
+            <p>Embalados um a um, com laço dourado e a etiqueta da Bolin Doces. Chocolate, coco, confeitos coloridos e coberturas crocantes.</p>
+          </div>
+          <a class="btn btn--wa btn--sm" data-wa="cones" href="#contato"><svg class="ico whatsapp-mark" aria-hidden="true" width="20" height="20" viewBox="0 0 32 32" fill="currentColor"><path d="M16.04 2.67A13.28 13.28 0 0 0 4.61 22.72L2.67 29.33l6.77-1.88a13.3 13.3 0 1 0 6.6-24.78Zm0 24.2a10.9 10.9 0 0 1-5.56-1.52l-.4-.24-4.02 1.12 1.16-3.91-.26-.41a10.92 10.92 0 1 1 9.08 4.96Zm5.99-8.18c-.33-.17-1.95-.96-2.25-1.07-.3-.11-.52-.17-.74.17-.22.33-.85 1.07-1.04 1.29-.19.22-.39.25-.72.08-.33-.17-1.4-.52-2.66-1.65-.98-.87-1.64-1.95-1.83-2.28-.19-.33-.02-.51.15-.68.15-.15.33-.39.5-.58.17-.19.22-.33.33-.55.11-.22.06-.41-.03-.58-.08-.17-.74-1.79-1.01-2.45-.27-.65-.54-.56-.74-.57h-.63c-.22 0-.58.08-.88.41-.3.33-1.15 1.12-1.15 2.73s1.18 3.17 1.34 3.39c.17.22 2.32 3.54 5.62 4.96.79.34 1.4.54 1.88.69.79.25 1.5.21 2.06.13.63-.09 1.95-.8 2.23-1.57.28-.77.28-1.43.19-1.57-.08-.14-.3-.22-.63-.39Z"/></svg><span>Encomendar cones</span></a>
+        </header>
+        <div class="mosaic mosaic--cones">
+        <figure class="tile" data-reveal style="--d:1/6;--dr:1/5;--m:span 2;--mr:span 3">
+          <button class="tile__btn" type="button" data-lightbox="assets/img/fotos/cones-variedade-582.webp" data-caption="Cones em círculo, cada um com sua cobertura" data-alt="Cones com etiqueta Bolin Doces dispostos em círculo, com coberturas crocantes, de coco e de confeitos coloridos." aria-label="Ampliar foto: Cones em círculo, cada um com sua cobertura">
+            <img src="assets/img/fotos/cones-variedade-582.webp" srcset="assets/img/fotos/cones-variedade-480.webp 480w, assets/img/fotos/cones-variedade-582.webp 582w" sizes="(min-width: 900px) 444px, 96vw" width="582" height="664" alt="Cones com etiqueta Bolin Doces dispostos em círculo, com coberturas crocantes, de coco e de confeitos coloridos." loading="lazy" decoding="async">
+            <span class="tile__cap">Cones em círculo, cada um com sua cobertura</span>
+          </button>
+        </figure>
+        <figure class="tile" data-reveal style="--d:6/13;--dr:1/3;--m:span 2;--mr:span 2">
+          <button class="tile__btn" type="button" data-lightbox="assets/img/fotos/cones-confeitos-546.webp" data-caption="Chocolate com confeitos coloridos" data-alt="Cinco cones de chocolate com confeitos coloridos e etiqueta Bolin Doces, embalados em celofane com laço dourado." aria-label="Ampliar foto: Chocolate com confeitos coloridos">
+            <img src="assets/img/fotos/cones-confeitos-546.webp" srcset="assets/img/fotos/cones-confeitos-546.webp 546w" sizes="(min-width: 900px) 604px, 96vw" width="546" height="377" alt="Cinco cones de chocolate com confeitos coloridos e etiqueta Bolin Doces, embalados em celofane com laço dourado." loading="lazy" decoding="async">
+            <span class="tile__cap">Chocolate com confeitos coloridos</span>
+          </button>
+        </figure>
+        <figure class="tile" data-reveal style="--d:6/9;--dr:3/5;--m:span 1;--mr:span 3">
+          <button class="tile__btn" type="button" data-lightbox="assets/img/fotos/cone-perolas-341.webp" data-caption="Chocolate com bolinhas brancas" data-alt="Mão segurando um cone embalado com laço dourado e etiqueta Bolin Doces, com cobertura de chocolate e bolinhas brancas." aria-label="Ampliar foto: Chocolate com bolinhas brancas">
+            <img src="assets/img/fotos/cone-perolas-341.webp" srcset="assets/img/fotos/cone-perolas-341.webp 341w" sizes="(min-width: 900px) 268px, 48vw" width="341" height="416" alt="Mão segurando um cone embalado com laço dourado e etiqueta Bolin Doces, com cobertura de chocolate e bolinhas brancas." loading="lazy" decoding="async" style="object-position:50% 60%">
+            <span class="tile__cap">Chocolate com bolinhas brancas</span>
+          </button>
+        </figure>
+        <figure class="tile" data-reveal style="--d:9/11;--dr:3/5;--m:span 1;--mr:span 3">
+          <button class="tile__btn" type="button" data-lightbox="assets/img/fotos/cone-chocolate-coco-392.webp" data-caption="Chocolate e coco" data-alt="Mão segurando um cone embalado em celofane com laço dourado e etiqueta Bolin Doces, com cobertura de chocolate e coco." aria-label="Ampliar foto: Chocolate e coco">
+            <img src="assets/img/fotos/cone-chocolate-coco-392.webp" srcset="assets/img/fotos/cone-chocolate-coco-392.webp 392w" sizes="(min-width: 900px) 172px, 48vw" width="392" height="651" alt="Mão segurando um cone embalado em celofane com laço dourado e etiqueta Bolin Doces, com cobertura de chocolate e coco." loading="lazy" decoding="async">
+            <span class="tile__cap">Chocolate e coco</span>
+          </button>
+        </figure>
+        <figure class="tile" data-reveal style="--d:11/13;--dr:3/5;--m:span 1;--mr:span 3">
+          <button class="tile__btn" type="button" data-lightbox="assets/img/fotos/cone-chocolate-mao-303.webp" data-caption="Cone de chocolate com laço dourado" data-alt="Mão segurando um cone de chocolate embalado em celofane, com laço dourado e etiqueta Bolin Doces." aria-label="Ampliar foto: Cone de chocolate com laço dourado">
+            <img src="assets/img/fotos/cone-chocolate-mao-303.webp" srcset="assets/img/fotos/cone-chocolate-mao-303.webp 303w" sizes="(min-width: 900px) 172px, 48vw" width="303" height="380" alt="Mão segurando um cone de chocolate embalado em celofane, com laço dourado e etiqueta Bolin Doces." loading="lazy" decoding="async" style="object-position:50% 70%">
+            <span class="tile__cap">Cone de chocolate com laço dourado</span>
+          </button>
+        </figure>
+        <figure class="tile" data-reveal style="--d:8/13;--dr:5/7;--m:span 1;--mr:span 3">
+          <button class="tile__btn" type="button" data-lightbox="assets/img/fotos/cones-trio-487.webp" data-caption="Três cones, três coberturas" data-alt="Mão segurando três cones embalados com etiqueta Bolin Doces: um de chocolate escuro, um branco com coco e um com confeitos coloridos." aria-label="Ampliar foto: Três cones, três coberturas">
+            <img src="assets/img/fotos/cones-trio-487.webp" srcset="assets/img/fotos/cones-trio-487.webp 487w" sizes="(min-width: 900px) 444px, 48vw" width="487" height="594" alt="Mão segurando três cones embalados com etiqueta Bolin Doces: um de chocolate escuro, um branco com coco e um com confeitos coloridos." loading="lazy" decoding="async" style="object-position:50% 40%">
+            <span class="tile__cap">Três cones, três coberturas</span>
+          </button>
+        </figure>
+        <figure class="tile" data-reveal style="--d:1/8;--dr:5/7;--m:span 2;--mr:span 2">
+          <button class="tile__btn" type="button" data-lightbox="assets/img/fotos/cones-crocantes-548.webp" data-caption="Coberturas crocantes" data-alt="Cones embalados com cobertura crocante e etiqueta Bolin Doces, ao lado de cones de chocolate e de granulado." aria-label="Ampliar foto: Coberturas crocantes">
+            <img src="assets/img/fotos/cones-crocantes-548.webp" srcset="assets/img/fotos/cones-crocantes-548.webp 548w" sizes="(min-width: 900px) 604px, 96vw" width="548" height="370" alt="Cones embalados com cobertura crocante e etiqueta Bolin Doces, ao lado de cones de chocolate e de granulado." loading="lazy" decoding="async">
+            <span class="tile__cap">Coberturas crocantes</span>
+          </button>
+        </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOLOS -->
+    <section class="section section--berry" id="bolos" aria-labelledby="bolos-titulo">
+      <div class="section__inner">
+        <header class="section__head section__head--split" data-reveal>
+          <div>
+            <h2 id="bolos-titulo">Bolos para cada comemoração</h2>
+            <p>Cada bolo é orçado conforme o pedido. Escolha um modelo como inspiração e peça o seu.</p>
+          </div>
+          <div class="head-tools">
+            <div class="arrows" aria-label="Navegar pelos bolos">
+              <button class="arrow" type="button" data-cake-prev aria-label="Bolos anteriores"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <button class="arrow" type="button" data-cake-next aria-label="Próximos bolos"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="cake-track" data-cake-track tabindex="0" role="region" aria-label="Bolos de personagens e temas">
+          <figure class="cake">
+            <button class="cake__btn" type="button" data-lightbox="assets/img/fotos/bolo-aranha-azul-960.webp" data-caption="Homem-Aranha em azul" data-alt="Bolo azul e vermelho decorado com toppers do Homem-Aranha, prédios, teia e vela em formato do número 6." aria-label="Ampliar foto: Homem-Aranha em azul">
+              <img src="assets/img/fotos/bolo-aranha-azul-960.webp" srcset="assets/img/fotos/bolo-aranha-azul-480.webp 480w, assets/img/fotos/bolo-aranha-azul-960.webp 960w, assets/img/fotos/bolo-aranha-azul-1200.webp 1200w" sizes="(min-width: 700px) 300px, 72vw" width="1200" height="1600" alt="Bolo azul e vermelho decorado com toppers do Homem-Aranha, prédios, teia e vela em formato do número 6." loading="lazy" decoding="async">
+            </button>
+            <figcaption>Homem-Aranha em azul</figcaption>
+          </figure>
+          <figure class="cake">
+            <button class="cake__btn" type="button" data-lightbox="assets/img/fotos/bolo-aranha-vermelho-960.webp" data-caption="Homem-Aranha em vermelho e azul" data-alt="Bolo em camadas de bicos vermelhos e azuis, com toppers de pequenos Homem-Aranha, cidade e faixa com nome." aria-label="Ampliar foto: Homem-Aranha em vermelho e azul">
+              <img src="assets/img/fotos/bolo-aranha-vermelho-960.webp" srcset="assets/img/fotos/bolo-aranha-vermelho-480.webp 480w, assets/img/fotos/bolo-aranha-vermelho-960.webp 960w, assets/img/fotos/bolo-aranha-vermelho-1200.webp 1200w" sizes="(min-width: 700px) 300px, 72vw" width="1200" height="1600" alt="Bolo em camadas de bicos vermelhos e azuis, com toppers de pequenos Homem-Aranha, cidade e faixa com nome." loading="lazy" decoding="async">
+            </button>
+            <figcaption>Homem-Aranha em vermelho e azul</figcaption>
+          </figure>
+          <figure class="cake">
+            <button class="cake__btn" type="button" data-lightbox="assets/img/fotos/bolo-batman-960.webp" data-caption="Batman" data-alt="Bolo amarelo com faixa preta e símbolo do Batman, decorado com toppers do morcego, da cidade e do Batmóvel." aria-label="Ampliar foto: Batman">
+              <img src="assets/img/fotos/bolo-batman-960.webp" srcset="assets/img/fotos/bolo-batman-480.webp 480w, assets/img/fotos/bolo-batman-960.webp 960w, assets/img/fotos/bolo-batman-1200.webp 1200w" sizes="(min-width: 700px) 300px, 72vw" width="1200" height="1600" alt="Bolo amarelo com faixa preta e símbolo do Batman, decorado com toppers do morcego, da cidade e do Batmóvel." loading="lazy" decoding="async">
+            </button>
+            <figcaption>Batman</figcaption>
+          </figure>
+          <figure class="cake">
+            <button class="cake__btn" type="button" data-lightbox="assets/img/fotos/bolo-frozen-960.webp" data-caption="Frozen" data-alt="Bolo azul claro com escorrido branco, pérolas azuis, vela dourada com o número 6 e toppers de personagens de Frozen." aria-label="Ampliar foto: Frozen">
+              <img src="assets/img/fotos/bolo-frozen-960.webp" srcset="assets/img/fotos/bolo-frozen-480.webp 480w, assets/img/fotos/bolo-frozen-960.webp 960w, assets/img/fotos/bolo-frozen-1200.webp 1200w" sizes="(min-width: 700px) 300px, 72vw" width="1200" height="1600" alt="Bolo azul claro com escorrido branco, pérolas azuis, vela dourada com o número 6 e toppers de personagens de Frozen." loading="lazy" decoding="async">
+            </button>
+            <figcaption>Frozen</figcaption>
+          </figure>
+          <figure class="cake">
+            <button class="cake__btn" type="button" data-lightbox="assets/img/fotos/bolo-cervinho-960.webp" data-caption="Cervinho e flores" data-alt="Bolo com três faixas de cobertura nas cores rosa, lilás e verde, decorado com flores coloridas e um topper de cervinho." aria-label="Ampliar foto: Cervinho e flores">
+              <img src="assets/img/fotos/bolo-cervinho-960.webp" srcset="assets/img/fotos/bolo-cervinho-480.webp 480w, assets/img/fotos/bolo-cervinho-960.webp 960w, assets/img/fotos/bolo-cervinho-1200.webp 1200w" sizes="(min-width: 700px) 300px, 72vw" width="1200" height="1600" alt="Bolo com três faixas de cobertura nas cores rosa, lilás e verde, decorado com flores coloridas e um topper de cervinho." loading="lazy" decoding="async">
+            </button>
+            <figcaption>Cervinho e flores</figcaption>
+          </figure>
+      </div>
+      <div class="section__inner section__inner--mix">
+        <div class="mosaic mosaic--mix">
+        <figure class="tile" data-reveal style="--d:1/6;--dr:1/5;--m:span 2;--mr:span 3">
+          <button class="tile__btn" type="button" data-lightbox="assets/img/fotos/bolo-pirulitos-960.webp" data-caption="Pirulitos gigantes e confeitos" data-alt="Bolo em tons pastel coberto de confeitos coloridos, com pirulitos gigantes no topo e marshmallows trançados na base." aria-label="Ampliar foto: Pirulitos gigantes e confeitos">
+            <img src="assets/img/fotos/bolo-pirulitos-960.webp" srcset="assets/img/fotos/bolo-pirulitos-480.webp 480w, assets/img/fotos/bolo-pirulitos-960.webp 960w, assets/img/fotos/bolo-pirulitos-1200.webp 1200w" sizes="(min-width: 900px) 444px, 96vw" width="1200" height="1600" alt="Bolo em tons pastel coberto de confeitos coloridos, com pirulitos gigantes no topo e marshmallows trançados na base." loading="lazy" decoding="async">
+            <span class="tile__cap">Pirulitos gigantes e confeitos</span>
+          </button>
+        </figure>
+        <figure class="tile" data-reveal style="--d:6/10;--dr:1/3;--m:span 1;--mr:span 2">
+          <button class="tile__btn" type="button" data-lightbox="assets/img/fotos/bolo-unicornio-543.webp" data-caption="Unicórnio" data-alt="Bolo branco com detalhes dourados, cílios pretos, chifre dourado e flores amarelas, no tema unicórnio." aria-label="Ampliar foto: Unicórnio">
+            <img src="assets/img/fotos/bolo-unicornio-543.webp" srcset="assets/img/fotos/bolo-unicornio-543.webp 543w" sizes="(min-width: 900px) 350px, 48vw" width="543" height="416" alt="Bolo branco com detalhes dourados, cílios pretos, chifre dourado e flores amarelas, no tema unicórnio." loading="lazy" decoding="async">
+            <span class="tile__cap">Unicórnio</span>
+          </button>
+        </figure>
+        <figure class="tile" data-reveal style="--d:10/13;--dr:1/3;--m:span 1;--mr:span 2">
+          <button class="tile__btn" type="button" data-lightbox="assets/img/fotos/bolo-marshmallow-443.webp" data-caption="Marshmallow trançado" data-alt="Bolo de dois andares com laterais de marshmallow trançado e topo coberto de confeitos coloridos." aria-label="Ampliar foto: Marshmallow trançado">
+            <img src="assets/img/fotos/bolo-marshmallow-443.webp" srcset="assets/img/fotos/bolo-marshmallow-443.webp 443w" sizes="(min-width: 900px) 268px, 48vw" width="443" height="332" alt="Bolo de dois andares com laterais de marshmallow trançado e topo coberto de confeitos coloridos." loading="lazy" decoding="async">
+            <span class="tile__cap">Marshmallow trançado</span>
+          </button>
+        </figure>
+        <figure class="tile" data-reveal style="--d:6/9;--dr:3/5;--m:span 1;--mr:span 3">
+          <button class="tile__btn" type="button" data-lightbox="assets/img/fotos/bolo-cerejas-960.webp" data-caption="Chocolate e cerejas" data-alt="Bolo com cobertura de chocolate e raspas de chocolate, decorado com cerejas vermelhas no topo." aria-label="Ampliar foto: Chocolate e cerejas">
+            <img src="assets/img/fotos/bolo-cerejas-960.webp" srcset="assets/img/fotos/bolo-cerejas-480.webp 480w, assets/img/fotos/bolo-cerejas-960.webp 960w, assets/img/fotos/bolo-cerejas-1200.webp 1200w" sizes="(min-width: 900px) 268px, 48vw" width="1200" height="1600" alt="Bolo com cobertura de chocolate e raspas de chocolate, decorado com cerejas vermelhas no topo." loading="lazy" decoding="async">
+            <span class="tile__cap">Chocolate e cerejas</span>
+          </button>
+        </figure>
+        <figure class="tile" data-reveal style="--d:9/13;--dr:3/5;--m:span 1;--mr:span 3">
+          <button class="tile__btn" type="button" data-lightbox="assets/img/fotos/bolo-barras-mesa-395.webp" data-caption="Barras de chocolate e laço azul" data-alt="Bolo com laterais de barras de chocolate, laço azul e confeitos coloridos, cercado por docinhos em forminhas." aria-label="Ampliar foto: Barras de chocolate e laço azul">
+            <img src="assets/img/fotos/bolo-barras-mesa-395.webp" srcset="assets/img/fotos/bolo-barras-mesa-395.webp 395w" sizes="(min-width: 900px) 350px, 48vw" width="395" height="527" alt="Bolo com laterais de barras de chocolate, laço azul e confeitos coloridos, cercado por docinhos em forminhas." loading="lazy" decoding="async" style="object-position:50% 58%">
+            <span class="tile__cap">Barras de chocolate e laço azul</span>
+          </button>
+        </figure>
+        </div>
+        <div class="section__cta" data-reveal>
+          <button class="btn" type="button" data-quote-open>Pedir orçamento de bolo</button>
+          <p>Conte o tamanho, o sabor, a decoração e a data da sua comemoração.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOCINHOS E MESAS -->
+    <section class="section section--rose" id="docinhos" aria-labelledby="docinhos-titulo">
+      <div class="section__inner">
+        <div class="mosaic mosaic--doc">
+          <div class="doc-intro" data-reveal style="--d:1/5;--dr:1/3;--m:span 2;--mr:span 1">
+            <h2 id="docinhos-titulo">Docinhos e mesas de festa</h2>
+            <p>Docinhos em forminhas, bandejas variadas e mesas montadas para comemorar.</p>
+          </div>
+        <figure class="tile" data-reveal style="--d:5/13;--dr:1/4;--m:span 2;--mr:span 2">
+          <button class="tile__btn" type="button" data-lightbox="assets/img/fotos/mesa-unicornio-960.webp" data-caption="Mesa de festa no tema unicórnio" data-alt="Mesa de festa com toalha azul de unicórnios, bolo decorado, docinhos em forminhas rosa e uma árvore de marshmallows." aria-label="Ampliar foto: Mesa de festa no tema unicórnio">
+            <img src="assets/img/fotos/mesa-unicornio-960.webp" srcset="assets/img/fotos/mesa-unicornio-480.webp 480w, assets/img/fotos/mesa-unicornio-960.webp 960w, assets/img/fotos/mesa-unicornio-1600.webp 1600w" sizes="(min-width: 900px) 700px, 96vw" width="1600" height="1200" alt="Mesa de festa com toalha azul de unicórnios, bolo decorado, docinhos em forminhas rosa e uma árvore de marshmallows." loading="lazy" decoding="async">
+            <span class="tile__cap">Mesa de festa no tema unicórnio</span>
+          </button>
+        </figure>
+        <figure class="tile" data-reveal style="--d:1/5;--dr:3/7;--m:span 1;--mr:span 3">
+          <button class="tile__btn" type="button" data-lightbox="assets/img/fotos/mesa-casamento-960.webp" data-caption="Bolo de dois andares e docinhos" data-alt="Mesa de festa com bolo de dois andares com flores e topper dourado, e docinhos em forminhas organizados à frente." aria-label="Ampliar foto: Bolo de dois andares e docinhos">
+            <img src="assets/img/fotos/mesa-casamento-960.webp" srcset="assets/img/fotos/mesa-casamento-480.webp 480w, assets/img/fotos/mesa-casamento-960.webp 960w, assets/img/fotos/mesa-casamento-1200.webp 1200w" sizes="(min-width: 900px) 350px, 48vw" width="1200" height="1600" alt="Mesa de festa com bolo de dois andares com flores e topper dourado, e docinhos em forminhas organizados à frente." loading="lazy" decoding="async" style="object-position:18% 50%">
+            <span class="tile__cap">Bolo de dois andares e docinhos</span>
+          </button>
+        </figure>
+        <figure class="tile" data-reveal style="--d:5/9;--dr:4/7;--m:span 1;--mr:span 3">
+          <button class="tile__btn" type="button" data-lightbox="assets/img/fotos/docinhos-bandeja-386.webp" data-caption="Docinhos em forminhas" data-alt="Bandeja de docinhos em forminhas pretas: de coco, de chocolate, de granulado e bicolores." aria-label="Ampliar foto: Docinhos em forminhas">
+            <img src="assets/img/fotos/docinhos-bandeja-386.webp" srcset="assets/img/fotos/docinhos-bandeja-386.webp 386w" sizes="(min-width: 900px) 350px, 48vw" width="386" height="515" alt="Bandeja de docinhos em forminhas pretas: de coco, de chocolate, de granulado e bicolores." loading="lazy" decoding="async">
+            <span class="tile__cap">Docinhos em forminhas</span>
+          </button>
+        </figure>
+          <div class="doc-cta" data-reveal style="--d:9/13;--dr:4/7;--m:span 2;--mr:span 2">
+            <p>Tem uma festa chegando?</p>
+            <a class="btn btn--wa" data-wa="docinhos" href="#contato"><svg class="ico whatsapp-mark" aria-hidden="true" width="20" height="20" viewBox="0 0 32 32" fill="currentColor"><path d="M16.04 2.67A13.28 13.28 0 0 0 4.61 22.72L2.67 29.33l6.77-1.88a13.3 13.3 0 1 0 6.6-24.78Zm0 24.2a10.9 10.9 0 0 1-5.56-1.52l-.4-.24-4.02 1.12 1.16-3.91-.26-.41a10.92 10.92 0 1 1 9.08 4.96Zm5.99-8.18c-.33-.17-1.95-.96-2.25-1.07-.3-.11-.52-.17-.74.17-.22.33-.85 1.07-1.04 1.29-.19.22-.39.25-.72.08-.33-.17-1.4-.52-2.66-1.65-.98-.87-1.64-1.95-1.83-2.28-.19-.33-.02-.51.15-.68.15-.15.33-.39.5-.58.17-.19.22-.33.33-.55.11-.22.06-.41-.03-.58-.08-.17-.74-1.79-1.01-2.45-.27-.65-.54-.56-.74-.57h-.63c-.22 0-.58.08-.88.41-.3.33-1.15 1.12-1.15 2.73s1.18 3.17 1.34 3.39c.17.22 2.32 3.54 5.62 4.96.79.34 1.4.54 1.88.69.79.25 1.5.21 2.06.13.63-.09 1.95-.8 2.23-1.57.28-.77.28-1.43.19-1.57-.08-.14-.3-.22-.63-.39Z"/></svg><span>Conte pra gente</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PATRICIA BOLIN -->
+    <section class="section section--blush section--patricia" id="patricia" aria-labelledby="patricia-titulo">
+      <div class="section__inner patricia">
+        <div class="patricia__photo" data-reveal>
+          <div class="patricia__frame">
+            <img src="assets/img/fotos/patricia-bolin-776.webp" srcset="assets/img/fotos/patricia-bolin-480.webp 480w, assets/img/fotos/patricia-bolin-776.webp 776w" sizes="(min-width: 900px) 440px, 80vw" width="776" height="851" alt="Patricia Bolin sorrindo, de vestido longo vinho, em frente a uma parede." loading="lazy" decoding="async" style="object-position:50% 20%">
+          </div>
+        </div>
+        <div class="patricia__text" data-reveal>
+          <h2 id="patricia-titulo">Por trás de cada doce, existe carinho.</h2>
+          <p class="patricia__name">Patricia Bolin</p>
+          <p>A Bolin Doces acredita que os doces fazem parte das lembranças mais gostosas de uma comemoração. Por isso, cada criação recebe atenção aos detalhes e muito capricho.</p>
+          <p>À frente desse carinho está Patricia Bolin, que transforma bolos, cones recheados e docinhos em parte de momentos especiais. A ideia é simples: preparar doces que deem ainda mais sabor às suas comemorações.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ: foto de fundo + chamada -->
+  <footer class="site-footer" id="contato">
+    <div class="cta">
+      <img class="cta__bg" src="assets/img/fotos/bolo-barras-confeitos-1600.webp" srcset="assets/img/fotos/bolo-barras-confeitos-960.webp 960w, assets/img/fotos/bolo-barras-confeitos-1600.webp 1600w" sizes="100vw" width="1600" height="1200" alt="" loading="lazy" decoding="async">
+      <div class="cta__shade" aria-hidden="true"></div>
+      <div class="cta__inner" data-reveal>
+        <h2>Vamos adoçar a sua comemoração?</h2>
+        <p>Conte o que você imagina e a gente conversa pelo WhatsApp.</p>
+        <a class="btn btn--wa btn--lg" data-wa href="#contato"><svg class="ico whatsapp-mark" aria-hidden="true" width="20" height="20" viewBox="0 0 32 32" fill="currentColor"><path d="M16.04 2.67A13.28 13.28 0 0 0 4.61 22.72L2.67 29.33l6.77-1.88a13.3 13.3 0 1 0 6.6-24.78Zm0 24.2a10.9 10.9 0 0 1-5.56-1.52l-.4-.24-4.02 1.12 1.16-3.91-.26-.41a10.92 10.92 0 1 1 9.08 4.96Zm5.99-8.18c-.33-.17-1.95-.96-2.25-1.07-.3-.11-.52-.17-.74.17-.22.33-.85 1.07-1.04 1.29-.19.22-.39.25-.72.08-.33-.17-1.4-.52-2.66-1.65-.98-.87-1.64-1.95-1.83-2.28-.19-.33-.02-.51.15-.68.15-.15.33-.39.5-.58.17-.19.22-.33.33-.55.11-.22.06-.41-.03-.58-.08-.17-.74-1.79-1.01-2.45-.27-.65-.54-.56-.74-.57h-.63c-.22 0-.58.08-.88.41-.3.33-1.15 1.12-1.15 2.73s1.18 3.17 1.34 3.39c.17.22 2.32 3.54 5.62 4.96.79.34 1.4.54 1.88.69.79.25 1.5.21 2.06.13.63-.09 1.95-.8 2.23-1.57.28-.77.28-1.43.19-1.57-.08-.14-.3-.22-.63-.39Z"/></svg><span>Conversar no WhatsApp</span></a>
+      </div>
+    </div>
+    <div class="foot">
+      <div class="foot__brand">
+        <img src="assets/img/logo.webp" alt="Bolin Doces" width="72" height="72" loading="lazy">
+        <p>Doces feitos com carinho.</p>
+      </div>
+      <nav class="foot__nav" aria-label="Rodapé">
+        <a href="#inicio">Início</a>
+        <a href="#cones">Cones</a>
+        <a href="#bolos">Bolos</a>
+        <a href="#docinhos">Docinhos</a>
+        <a href="#patricia">Patricia Bolin</a>
+      </nav>
+      <p class="foot__copy">&copy; <span id="ano">2026</span> Bolin Doces</p>
+    </div>
+  </footer>
+
+  <!-- Foto ampliada -->
+  <dialog class="lightbox" data-lightbox-dialog aria-label="Foto ampliada">
+    <button class="lightbox__close" type="button" data-lightbox-close aria-label="Fechar foto"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    <button class="lightbox__nav lightbox__nav--prev" type="button" data-lightbox-prev aria-label="Foto anterior"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <button class="lightbox__nav lightbox__nav--next" type="button" data-lightbox-next aria-label="Próxima foto"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <figure class="lightbox__fig">
+      <img data-lightbox-img alt="">
+      <figcaption>
+        <span data-lightbox-caption></span>
+        <a class="btn btn--wa btn--sm" data-wa href="#contato"><svg class="ico whatsapp-mark" aria-hidden="true" width="20" height="20" viewBox="0 0 32 32" fill="currentColor"><path d="M16.04 2.67A13.28 13.28 0 0 0 4.61 22.72L2.67 29.33l6.77-1.88a13.3 13.3 0 1 0 6.6-24.78Zm0 24.2a10.9 10.9 0 0 1-5.56-1.52l-.4-.24-4.02 1.12 1.16-3.91-.26-.41a10.92 10.92 0 1 1 9.08 4.96Zm5.99-8.18c-.33-.17-1.95-.96-2.25-1.07-.3-.11-.52-.17-.74.17-.22.33-.85 1.07-1.04 1.29-.19.22-.39.25-.72.08-.33-.17-1.4-.52-2.66-1.65-.98-.87-1.64-1.95-1.83-2.28-.19-.33-.02-.51.15-.68.15-.15.33-.39.5-.58.17-.19.22-.33.33-.55.11-.22.06-.41-.03-.58-.08-.17-.74-1.79-1.01-2.45-.27-.65-.54-.56-.74-.57h-.63c-.22 0-.58.08-.88.41-.3.33-1.15 1.12-1.15 2.73s1.18 3.17 1.34 3.39c.17.22 2.32 3.54 5.62 4.96.79.34 1.4.54 1.88.69.79.25 1.5.21 2.06.13.63-.09 1.95-.8 2.23-1.57.28-.77.28-1.43.19-1.57-.08-.14-.3-.22-.63-.39Z"/></svg><span>Pedir pelo WhatsApp</span></a>
+      </figcaption>
+    </figure>
+  </dialog>
+
+  <!-- Orçamento de bolos: exatamente 4 campos -->
+  <dialog class="quote" data-quote aria-labelledby="quote-title">
+    <button class="lightbox__close lightbox__close--light" type="button" data-quote-close aria-label="Fechar formulário"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    <form class="quote__form" data-quote-form novalidate>
+      <h2 id="quote-title">Solicite seu orçamento</h2>
+      <div class="field">
+        <label for="q-tamanho">Tamanho do bolo</label>
+        <input id="q-tamanho" name="tamanho" type="text" maxlength="120" autocomplete="off" placeholder="Descreva o tamanho desejado" aria-describedby="q-tamanho-erro">
+        <p class="field__error" id="q-tamanho-erro" data-error="tamanho" hidden></p>
+      </div>
+      <div class="field">
+        <label for="q-sabor">Sabor ou recheio</label>
+        <textarea id="q-sabor" name="sabor" rows="2" maxlength="300" placeholder="Descreva o sabor ou recheio desejado" aria-describedby="q-sabor-erro"></textarea>
+        <p class="field__error" id="q-sabor-erro" data-error="sabor" hidden></p>
+      </div>
+      <div class="field">
+        <label for="q-decoracao">Decoração</label>
+        <textarea id="q-decoracao" name="decoracao" rows="3" maxlength="400" placeholder="Descreva a decoração desejada" aria-describedby="q-decoracao-erro"></textarea>
+        <p class="field__error" id="q-decoracao-erro" data-error="decoracao" hidden></p>
+      </div>
+      <div class="field">
+        <label for="q-data">Data de entrega</label>
+        <input id="q-data" name="data" type="date" aria-describedby="q-data-erro">
+        <p class="field__error" id="q-data-erro" data-error="data" hidden></p>
+      </div>
+      <button class="btn btn--block" type="submit">Solicitar orçamento pelo WhatsApp</button>
+      <p class="quote__note">O WhatsApp abre com a mensagem pronta. Você revisa e envia por lá.</p>
+      <p class="quote__status" data-quote-status role="status"></p>
+    </form>
+  </dialog>
+
+  <!-- WhatsApp flutuante -->
+  <a class="wa-fab" data-wa="info" href="#contato" aria-label="Falar com a Bolin Doces pelo WhatsApp">
+    <svg class="ico whatsapp-mark" aria-hidden="true" width="30" height="30" viewBox="0 0 32 32" fill="currentColor"><path d="M16.04 2.67A13.28 13.28 0 0 0 4.61 22.72L2.67 29.33l6.77-1.88a13.3 13.3 0 1 0 6.6-24.78Zm0 24.2a10.9 10.9 0 0 1-5.56-1.52l-.4-.24-4.02 1.12 1.16-3.91-.26-.41a10.92 10.92 0 1 1 9.08 4.96Zm5.99-8.18c-.33-.17-1.95-.96-2.25-1.07-.3-.11-.52-.17-.74.17-.22.33-.85 1.07-1.04 1.29-.19.22-.39.25-.72.08-.33-.17-1.4-.52-2.66-1.65-.98-.87-1.64-1.95-1.83-2.28-.19-.33-.02-.51.15-.68.15-.15.33-.39.5-.58.17-.19.22-.33.33-.55.11-.22.06-.41-.03-.58-.08-.17-.74-1.79-1.01-2.45-.27-.65-.54-.56-.74-.57h-.63c-.22 0-.58.08-.88.41-.3.33-1.15 1.12-1.15 2.73s1.18 3.17 1.34 3.39c.17.22 2.32 3.54 5.62 4.96.79.34 1.4.54 1.88.69.79.25 1.5.21 2.06.13.63-.09 1.95-.8 2.23-1.57.28-.77.28-1.43.19-1.57-.08-.14-.3-.22-.63-.39Z"/></svg>
+  </a>
+  <!-- Cursor personalizado: fatia de bolo -->
+  <div class="cake-cursor" data-cake-cursor aria-hidden="true">
+    <svg viewBox="0 0 160 140" xmlns="http://www.w3.org/2000/svg" role="presentation">
+      <!-- Silhueta robusta, com traço escuro e camadas rosa/amarelo, inspirada na referência -->
+      <path d="M18 24 L143 83 L143 126 L49 126 L18 78 Z" fill="#f1c27d" stroke="#35171f" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M18 24 L49 72 L49 126 L18 78 Z" fill="#e5a94f" stroke="#35171f" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M18 24 L143 83 L49 72 Z" fill="#fff8f2" stroke="#35171f" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M49 91 L143 91 L143 104 L49 104 Z" fill="#e77b98" stroke="#35171f" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M49 80 Q56 87 63 81 Q69 90 76 82 Q84 90 91 82 Q98 90 106 82 Q114 90 121 82 Q132 88 143 83 L143 94 L49 94 Z" fill="#fff8f2" stroke="#35171f" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M35 39 L101 70" stroke="#e77b98" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="91" cy="44" r="16" fill="#ad3156" stroke="#35171f" stroke-width="5"/>
+      <path d="M91 27 Q94 14 105 10" fill="none" stroke="#35171f" stroke-width="5" stroke-linecap="round"/>
+      <path d="M84 36 Q88 31 93 33" fill="none" stroke="#fff8f2" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="65" cy="60" r="3.5" fill="#c65e7b"/><circle cx="115" cy="66" r="3.5" fill="#e6ae5c"/>
+    </svg>
+  </div></div>
+</body>
+</html>

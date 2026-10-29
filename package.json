@@ -1,0 +1,9 @@
+{
+  "name": "bolin-doces",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Site da Bolin Doces — etapa 1: identidade visual e hero com vídeo",
+  "scripts": {
+    "dev": "npx --yes serve . -l 3000"
+  }
+}
